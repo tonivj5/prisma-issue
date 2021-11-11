@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Prisma",
+      "args": ["${workspaceFolder}/script.ts"],
+      "runtimeArgs": ["-r", "ts-node/register/transpile-only"],
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}",
+      "outputCapture": "std",
+      "smartStep": true,
+      "skipFiles": [
+        "tslib",
+        "node_modules/tslib",
+        "node_modules/zone.js",
+        "node_modules/graceful-fs",
+        "node_modules/ajv",
+        "node_modules/es-abstract",
+        "node_modules/jest-resolve",
+        "<node_internals>/**",
+        "<node_internals>/**/*"
+      ]
+    }
+  ]
+}
